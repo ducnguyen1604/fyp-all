@@ -1,0 +1,14 @@
+import torch.nn as nn
+import torchvision.models as models
+
+def get_mobilenetv3_backbone(pretrained=True):
+    model = models.mobilenet_v3_large(pretrained=pretrained)
+    
+    # Remove the classifier and pooling layers to get feature extraction layers only
+    backbone = model.features
+    
+    return backbone
+
+def get_feature_dim():
+    # This returns the output channel dimension for MobileNetV3-Large features
+    return 960
