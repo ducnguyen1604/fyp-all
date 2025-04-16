@@ -1,0 +1,13 @@
+# Fusion configuration for late fusion
+
+rgb_model_path: results/logs/rgb/best_model.pth
+ir_model_path: results/logs/ir/best_model.pth
+rgb_image_dir: data/images_rgb/
+ir_image_dir: data/images_ir/
+output_dir: results/fused_detections/
+
+alpha: 0.6              # confidence weighting factor (0 = IR only, 1 = RGB only)
+iou_threshold: 0.5      # minimum IoU to match boxes
+score_threshold: 0.3    # minimum confidence to consider a prediction
+
+device: cuda

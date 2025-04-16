@@ -1,0 +1,9 @@
+# Training configuration for RGB modality
+
+data_path: data/
+epochs: 50
+batch_size: 16
+learning_rate: 0.0002
+pretrained: models/resnet/resnet50_rgb.pth  # or null if training from scratch
+save_dir: results/logs/rgb/
+num_classes: 1
